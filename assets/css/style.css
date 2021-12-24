@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 4, 4, 0.993), rgba(255, 251, 2, 0.7));
+    background-repeat: no;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    display: none;
+}
+
+.thumb {
+    width: 250px;
+    height: 200px;
+    margin: 70px auto;
+    perspective: 1000px;    
+}
+
+.thumb a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+
+.thumb1 a {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images7.alphacoders.com/500/thumb-1920-500507.jpg);
+    background-size: 0, cover;
+    background-position: center center;
+}
+
+.thumb2 a {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://blog.rodeowest.com.br/wp-content/uploads/2020/12/clydesdale.jpg);
+    background-size: 0, cover;
+    background-position: center center;
+}
+
+.thumb3 a {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://img.besthqwallpapers.com/Uploads/10-3-2018/43704/big-brown-horse-ranch-farm-beautiful-horse-sunset.jpg);
+    background-size: 0, cover;
+    background-position: center center;
+}
+
+.thumb4 a {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://www.comprerural.com/wp-content/uploads/2018/06/8e4259d783349ecc814dfbe4a5207e78-640x560.jpg);
+    background-size: 0, cover;
+    background-position: center center;
+}
+
+.thumb:hover a {
+    transform: rotateY(20deg);
+    transform-origin: top;
+    width: 270px;
+    height: 300px;
+    margin-top: -30px;
+
+}
+
+.thumb a:hover span {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    text-decoration: double;
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #003cff;
+}
+
+.thumb a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 0 100px 50px rgba(0,0,0,0.5);
+    transition: 0.40s all;
+    opacity: 0.15;
+    transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+    transform-origin: bottom;
+}
+
+.thumb:hover a::before {
+    opacity: 1;
+    box-shadow: 0px 0px 25px 25px rgba(0,0,0,0);
+    transform: rotateX(0deg) scale(0.0001);
+}
